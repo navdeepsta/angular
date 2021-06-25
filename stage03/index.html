@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+      body { 
+      font-size: 1.5em; 
+      width: 50%;
+      margin: auto;
+      color: orange;
+      background-color: #111111;
+      }
+     
+      #name-numeric {
+        background-color: #000000;
+        padding: 50px;
+      }
+      
+      input {
+        padding: 10px;
+        background-color: #111111;
+        color: white;
+        border: 2px solid white;
+        font-size: 24px;
+      }
+    </style>
+    <title>Name Numeric</title>
+  </head>
+  <body ng-app="NameNumeric"> 
+    <h1>Name Numeric</h1>
+    <div ng-controller="NameNumericController" id="name-numeric">
+      <div>
+        Your name:
+        <input type="text" ng-model="name" ng-keyup="displayNumeric();">
+      </div>
+      <div> Total Numeric value of person's name is: {{totalValue}}</div>
+    </div>
+  </body>
+</html>
